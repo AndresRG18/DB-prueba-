@@ -1,7 +1,8 @@
-import { Router } from "express";
+import express from "express";
 import { getTasks, createTask } from "../controllers/taskController.js";
 
-const router = Router();
+const router = express.Router();
+
 router.get("/", getTasks);
 router.post("/", createTask);
 
